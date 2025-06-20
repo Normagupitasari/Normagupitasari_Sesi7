@@ -1,0 +1,27 @@
+{
+  "name": "normagupitasari_sesi7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter mochawesome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Normagupitasari/Normagupitasari_Sesi7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Normagupitasari/Normagupitasari_Sesi7/issues"
+  },
+  "homepage": "https://github.com/Normagupitasari/Normagupitasari_Sesi7#readme",
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "chai": "^5.2.0",
+    "mocha": "^11.7.0",
+    "mochawesome": "^7.1.3"
+  }
+}

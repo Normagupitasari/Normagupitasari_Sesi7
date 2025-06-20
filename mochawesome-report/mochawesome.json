@@ -1,0 +1,176 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-20T21:55:24.067Z",
+    "end": "2025-06-20T21:55:26.057Z",
+    "duration": 1990,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6162196d-83d0-4a58-9baa-35ab612d985a",
+      "title": "",
+      "fullFile": "C:\\Users\\testu\\Documents\\Mini Bootcamp QA Engineer\\2. Meeting\\Sesi 7 - API Automation\\Homework Sesi 7\\Normagupitasari_Sesi7\\test\\reqres.js",
+      "file": "\\test\\reqres.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8bb9d9db-1f25-481f-b0e3-20ffefa65923",
+          "title": "Feature Reqres",
+          "fullFile": "C:\\Users\\testu\\Documents\\Mini Bootcamp QA Engineer\\2. Meeting\\Sesi 7 - API Automation\\Homework Sesi 7\\Normagupitasari_Sesi7\\test\\reqres.js",
+          "file": "\\test\\reqres.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET Single User",
+              "fullTitle": "Feature Reqres GET Single User",
+              "timedOut": false,
+              "duration": 302,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/2\");\nconst data = await response.json();\n//console.log(data);\nassert.strictEqual(response.status, 200);\nassert.strictEqual(data.data.id, 2);\nassert.strictEqual(data.data.first_name, \"Janet\");",
+              "err": {},
+              "uuid": "6a7e0ec6-5f2a-46a8-8ccf-4e943426bfc8",
+              "parentUUID": "8bb9d9db-1f25-481f-b0e3-20ffefa65923",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST Create",
+              "fullTitle": "Feature Reqres POST Create",
+              "timedOut": false,
+              "duration": 426,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users\", {\n    method: \"POST\",\n    headers: {\n        \"x-api-key\": \"reqres-free-v1\",\n        \"Content-Type\": \"application/json\",\n    },\n    body: JSON.stringify({\n        name: \"shinta\",\n        job: \"leader\",\n    }),\n});\nconst data = await response.json();\n//console.log(data);\n// expect(response.status).to.equal(201);\n// expect(data.name).to.include(\"shinta\");\n// expect(data.job).to.include(\"leader\");\nassert.strictEqual(response.status, 201);\nassert.strictEqual(data.name, \"shinta\");",
+              "err": {},
+              "uuid": "041927a3-0826-4c2e-87fe-051d3ae5bfa5",
+              "parentUUID": "8bb9d9db-1f25-481f-b0e3-20ffefa65923",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "PUT Update User",
+              "fullTitle": "Feature Reqres PUT Update User",
+              "timedOut": false,
+              "duration": 419,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/2\", {\n    method: \"PUT\",\n    headers: {\n        \"x-api-key\": \"reqres-free-v1\",\n        \"Content-Type\": \"application/json\",\n    },\n    body: JSON.stringify({\n        name: \"morpheus\",\n        job: \"zion resident\",\n    }),\n});\nconst data = await response.json();\n//console.log(data);\nassert.strictEqual(response.status, 200);\nassert.strictEqual(data.name, \"morpheus\");\nassert.strictEqual(data.job, \"zion resident\");",
+              "err": {},
+              "uuid": "3b4bdf48-c3a0-4585-8573-f67ce4616b76",
+              "parentUUID": "8bb9d9db-1f25-481f-b0e3-20ffefa65923",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "PATCH Update User",
+              "fullTitle": "Feature Reqres PATCH Update User",
+              "timedOut": false,
+              "duration": 418,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/2\", {\n    method: \"PATCH\",\n    headers: {\n        \"x-api-key\": \"reqres-free-v1\",\n        \"Content-Type\": \"application/json\",\n    },\n    body: JSON.stringify({\n        name: \"morpheus\",\n        job: \"zion resident\",\n    }),\n});\nconst data = await response.json();\n//console.log(data);\nassert.strictEqual(response.status, 200);\nassert.strictEqual(data.name, \"morpheus\");\nassert.strictEqual(data.job, \"zion resident\");",
+              "err": {},
+              "uuid": "255499db-c6d5-49bd-94c9-618dd1366d7a",
+              "parentUUID": "8bb9d9db-1f25-481f-b0e3-20ffefa65923",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "DELETE User",
+              "fullTitle": "Feature Reqres DELETE User",
+              "timedOut": false,
+              "duration": 410,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/2\", {\n    method: \"DELETE\",\n    headers: {\n        \"x-api-key\": \"reqres-free-v1\",\n    },\n});\n//console.log(response);\nassert.strictEqual(response.status, 204);",
+              "err": {},
+              "uuid": "7a290249-1e5e-41d7-aca6-87a70481e13e",
+              "parentUUID": "8bb9d9db-1f25-481f-b0e3-20ffefa65923",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6a7e0ec6-5f2a-46a8-8ccf-4e943426bfc8",
+            "041927a3-0826-4c2e-87fe-051d3ae5bfa5",
+            "3b4bdf48-c3a0-4585-8573-f67ce4616b76",
+            "255499db-c6d5-49bd-94c9-618dd1366d7a",
+            "7a290249-1e5e-41d7-aca6-87a70481e13e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1975,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
